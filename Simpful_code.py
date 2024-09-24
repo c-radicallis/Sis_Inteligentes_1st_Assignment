@@ -6,11 +6,11 @@ RULE1 = "IF (voltage IS cluster1) THEN (OUTPUT IS fun1)"
 RULE2 = "IF (voltage IS cluster2) THEN (OUTPUT IS fun2)"
 FS.add_rules([RULE1, RULE2])
 
-FS.set_output_function('fun1', '0.547156+0.043972*voltage')
-FS.set_output_function('fun2', '0.487026+-0.011522*voltage')
+FS.set_output_function('fun1', '4.724371+0.043687*voltage')
+FS.set_output_function('fun2', '4.726978+-0.01212*voltage')
 
-FS_1 = FuzzySet(function=Gaussian_MF(1.208867, 0.685764), term='cluster1')
-FS_2 = FuzzySet(function=Gaussian_MF(-0.270671, 0.752484), term='cluster2')
+FS_1 = FuzzySet(function=Gaussian_MF(6.989864, 2.040304), term='cluster1')
+FS_2 = FuzzySet(function=Gaussian_MF(2.788740, 2.154338), term='cluster2')
 MF_voltage = LinguisticVariable([FS_1, FS_2], concept='voltage')
 FS.add_linguistic_variable('voltage', MF_voltage)
 
