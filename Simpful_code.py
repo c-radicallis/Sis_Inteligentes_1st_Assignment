@@ -6,8 +6,8 @@ RULE1 = "IF (voltage IS cluster1) THEN (OUTPUT IS fun1)"
 RULE2 = "IF (voltage IS cluster2) THEN (OUTPUT IS fun2)"
 FS.add_rules([RULE1, RULE2])
 
-FS.set_output_function('fun1', '4.724371+0.043687*voltage')
-FS.set_output_function('fun2', '4.726978+-0.01212*voltage')
+FS.set_output_function('fun1', '4.723918+0.043757*voltage')
+FS.set_output_function('fun2', '4.726848+-0.012077*voltage')
 
 FS_1 = FuzzySet(function=Gaussian_MF(6.989864, 2.040304), term='cluster1')
 FS_2 = FuzzySet(function=Gaussian_MF(2.788740, 2.154338), term='cluster2')
