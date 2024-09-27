@@ -4,14 +4,68 @@ from simpful import *
 FS = FuzzySystem(show_banner=False)
 RULE1 = "IF (voltage IS cluster1) THEN (OUTPUT IS fun1)"
 RULE2 = "IF (voltage IS cluster2) THEN (OUTPUT IS fun2)"
-FS.add_rules([RULE1, RULE2])
+RULE3 = "IF (voltage IS cluster3) THEN (OUTPUT IS fun3)"
+RULE4 = "IF (voltage IS cluster4) THEN (OUTPUT IS fun4)"
+RULE5 = "IF (voltage IS cluster5) THEN (OUTPUT IS fun5)"
+RULE6 = "IF (voltage IS cluster6) THEN (OUTPUT IS fun6)"
+RULE7 = "IF (voltage IS cluster7) THEN (OUTPUT IS fun7)"
+RULE8 = "IF (voltage IS cluster8) THEN (OUTPUT IS fun8)"
+RULE9 = "IF (voltage IS cluster9) THEN (OUTPUT IS fun9)"
+RULE10 = "IF (voltage IS cluster10) THEN (OUTPUT IS fun10)"
+RULE11 = "IF (voltage IS cluster11) THEN (OUTPUT IS fun11)"
+RULE12 = "IF (voltage IS cluster12) THEN (OUTPUT IS fun12)"
+RULE13 = "IF (voltage IS cluster13) THEN (OUTPUT IS fun13)"
+RULE14 = "IF (voltage IS cluster14) THEN (OUTPUT IS fun14)"
+RULE15 = "IF (voltage IS cluster15) THEN (OUTPUT IS fun15)"
+RULE16 = "IF (voltage IS cluster16) THEN (OUTPUT IS fun16)"
+RULE17 = "IF (voltage IS cluster17) THEN (OUTPUT IS fun17)"
+RULE18 = "IF (voltage IS cluster18) THEN (OUTPUT IS fun18)"
+RULE19 = "IF (voltage IS cluster19) THEN (OUTPUT IS fun19)"
+RULE20 = "IF (voltage IS cluster20) THEN (OUTPUT IS fun20)"
+FS.add_rules([RULE1, RULE2, RULE3, RULE4, RULE5, RULE6, RULE7, RULE8, RULE9, RULE10, RULE11, RULE12, RULE13, RULE14, RULE15, RULE16, RULE17, RULE18, RULE19, RULE20])
 
-FS.set_output_function('fun1', '4.723918+0.043757*voltage')
-FS.set_output_function('fun2', '4.726848+-0.012077*voltage')
+FS.set_output_function('fun1', '3.529147+0.342742*voltage')
+FS.set_output_function('fun2', '4.431161+0.036477*voltage')
+FS.set_output_function('fun3', '6.647486+-0.245711*voltage')
+FS.set_output_function('fun4', '2.047935+0.426385*voltage')
+FS.set_output_function('fun5', '3.289607+0.422141*voltage')
+FS.set_output_function('fun6', '4.987516+-0.002725*voltage')
+FS.set_output_function('fun7', '6.140278+-0.170822*voltage')
+FS.set_output_function('fun8', '5.162884+-0.212507*voltage')
+FS.set_output_function('fun9', '4.017169+0.178095*voltage')
+FS.set_output_function('fun10', '5.676152+-0.102777*voltage')
+FS.set_output_function('fun11', '5.428838+-0.301612*voltage')
+FS.set_output_function('fun12', '3.199123+0.256819*voltage')
+FS.set_output_function('fun13', '4.23125+0.10513*voltage')
+FS.set_output_function('fun14', '4.327067+0.093019*voltage')
+FS.set_output_function('fun15', '4.662706+-0.042937*voltage')
+FS.set_output_function('fun16', '4.876273+-0.115955*voltage')
+FS.set_output_function('fun17', '3.754951+0.26685*voltage')
+FS.set_output_function('fun18', '7.022202+-0.300619*voltage')
+FS.set_output_function('fun19', '2.703925+0.329551*voltage')
+FS.set_output_function('fun20', '3.810185+0.168026*voltage')
 
-FS_1 = FuzzySet(function=Gaussian_MF(6.989864, 2.040304), term='cluster1')
-FS_2 = FuzzySet(function=Gaussian_MF(2.788740, 2.154338), term='cluster2')
-MF_voltage = LinguisticVariable([FS_1, FS_2], concept='voltage')
+FS_1 = FuzzySet(function=Gaussian_MF(6.785022, 1.550086), term='cluster1')
+FS_2 = FuzzySet(function=Gaussian_MF(6.786060, 1.552352), term='cluster2')
+FS_3 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster3')
+FS_4 = FuzzySet(function=Gaussian_MF(3.034978, 1.550086), term='cluster4')
+FS_5 = FuzzySet(function=Gaussian_MF(6.783986, 1.547823), term='cluster5')
+FS_6 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster6')
+FS_7 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster7')
+FS_8 = FuzzySet(function=Gaussian_MF(6.787099, 1.554623), term='cluster8')
+FS_9 = FuzzySet(function=Gaussian_MF(6.785022, 1.550086), term='cluster9')
+FS_10 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster10')
+FS_11 = FuzzySet(function=Gaussian_MF(6.787099, 1.554623), term='cluster11')
+FS_12 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster12')
+FS_13 = FuzzySet(function=Gaussian_MF(6.786060, 1.552352), term='cluster13')
+FS_14 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster14')
+FS_15 = FuzzySet(function=Gaussian_MF(6.786060, 1.552352), term='cluster15')
+FS_16 = FuzzySet(function=Gaussian_MF(6.786060, 1.552352), term='cluster16')
+FS_17 = FuzzySet(function=Gaussian_MF(6.785022, 1.550086), term='cluster17')
+FS_18 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster18')
+FS_19 = FuzzySet(function=Gaussian_MF(3.034978, 1.550086), term='cluster19')
+FS_20 = FuzzySet(function=Gaussian_MF(3.036014, 1.547823), term='cluster20')
+MF_voltage = LinguisticVariable([FS_1, FS_2, FS_3, FS_4, FS_5, FS_6, FS_7, FS_8, FS_9, FS_10, FS_11, FS_12, FS_13, FS_14, FS_15, FS_16, FS_17, FS_18, FS_19, FS_20], concept='voltage')
 FS.add_linguistic_variable('voltage', MF_voltage)
 
 
